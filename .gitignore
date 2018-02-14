@@ -1,3 +1,13 @@
+# Nordic SDK
+nRF5_SDK_12.3.0/components
+nRF5_SDK_12.3.0/documentation
+nRF5_SDK_12.3.0/examples
+nRF5_SDK_12.3.0/external
+nRF5_SDK_12.3.0/svd
+nRF5_SDK_12.3.0/license.txt
+nRF5_SDK_12.3.0/nRF5x_MDK_8_11_1_IAR.msi
+nRF5_SDK_12.3.0/nRF5x_MDK_8_11_1_Keil4.msi
+
 # Prerequisites
 *.d
 
