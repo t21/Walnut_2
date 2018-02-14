@@ -1,12 +1,15 @@
 PROJECT_NAME     := ble_app_buttonless_dfu_pca10028_s130
-TARGETS          := nrf51422_xxac
+TARGETS          := walnut2_debug walnut2_release
 OUTPUT_DIRECTORY := _build
 
 SDK_ROOT := ../../../../../..
 PROJ_DIR := ../../..
 
-$(OUTPUT_DIRECTORY)/nrf51422_xxac.out: \
-  LINKER_SCRIPT  := ble_app_buttonless_dfu_gcc_nrf51.ld
+$(OUTPUT_DIRECTORY)/walnut2_release.out: \
+  LINKER_SCRIPT  := walnut_gcc_nrf51.ld
+
+$(OUTPUT_DIRECTORY)/walnut2_debug.out: \
+  LINKER_SCRIPT  := walnut_gcc_nrf51.ld
 
 # Source files common to all targets
 SRC_FILES += \
@@ -173,37 +176,42 @@ INC_FOLDERS += \
 LIB_FILES += \
 
 # C flags common to all targets
-CFLAGS += -DBOARD_PCA10028
+CFLAGS += -DBOARD_CUSTOM
 CFLAGS += -DSOFTDEVICE_PRESENT
 CFLAGS += -DNRF51
 CFLAGS += -DNRF_DFU_SETTINGS_VERSION=1
 CFLAGS += -DS130
 CFLAGS += -DBLE_STACK_SUPPORT_REQD
 CFLAGS += -DSWI_DISABLE0
-CFLAGS += -DNRF51422
+CFLAGS += -DNRF51822
 CFLAGS += -DNRF_SD_BLE_API_VERSION=2
+CFLAGS += -D__HEAP_SIZE=0
+walnut2_debug: CFLAGS += -DNRF_LOG_ENABLED
+walnut2_debug: CFLAGS += -DNRF_LOG_DEFAULT_LEVEL=4
 CFLAGS += -mcpu=cortex-m0
 CFLAGS += -mthumb -mabi=aapcs
-CFLAGS +=  -Wall -Werror -O3 -g3
+walnut2_release: CFLAGS +=  -Wall -Werror -O3 -g3
+walnut2_debug: CFLAGS +=  -Wall -Werror -O0 -g3
 CFLAGS += -mfloat-abi=soft
 # keep every function in separate section, this allows linker to discard unused ones
 CFLAGS += -ffunction-sections -fdata-sections -fno-strict-aliasing
-CFLAGS += -fno-builtin --short-enums 
+walnut2_release: CFLAGS += -fno-builtin --short-enums
 
 # C++ flags common to all targets
 CXXFLAGS += \
 
 # Assembler flags common to all targets
 ASMFLAGS += -x assembler-with-cpp
-ASMFLAGS += -DBOARD_PCA10028
+ASMFLAGS += -DBOARD_CUSTOM
 ASMFLAGS += -DSOFTDEVICE_PRESENT
 ASMFLAGS += -DNRF51
 ASMFLAGS += -DNRF_DFU_SETTINGS_VERSION=1
 ASMFLAGS += -DS130
 ASMFLAGS += -DBLE_STACK_SUPPORT_REQD
 ASMFLAGS += -DSWI_DISABLE0
-ASMFLAGS += -DNRF51422
+ASMFLAGS += -DNRF51822
 ASMFLAGS += -DNRF_SD_BLE_API_VERSION=2
+ASMFLAGS += -D__HEAP_SIZE=0
 
 # Linker flags
 LDFLAGS += -mthumb -mabi=aapcs -L $(TEMPLATE_PATH) -T$(LINKER_SCRIPT)
@@ -217,12 +225,13 @@ LDFLAGS += --specs=nano.specs -lc -lnosys
 .PHONY: $(TARGETS) default all clean help flash flash_softdevice
 
 # Default target - first one defined
-default: nrf51422_xxac
+default: walnut2_debug
 
 # Print all targets that can be built
 help:
 	@echo following targets are available:
-	@echo 	nrf51422_xxac
+	@echo 	walnut2_debug (default) - -O0, logs enabled
+	@echo 	walnut2_release         - -O3, no logs
 
 TEMPLATE_PATH := $(SDK_ROOT)/components/toolchain/gcc
 
