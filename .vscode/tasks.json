@@ -1,0 +1,43 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build walnut2_debug",
+            "type": "shell",
+            "command": "cd ${workspaceFolder}/nRF5_SDK_12.3.0/projects/ble_peripheral/Walnut2/walnut/s130/armgcc && make walnut2_debug && cd - 2>&1 >/dev/null",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build walnut2_release",
+            "type": "shell",
+            "command": "cd ${workspaceFolder}/nRF5_SDK_12.3.0/projects/ble_peripheral/Walnut2/walnut/s130/armgcc && make walnut2_release && cd - 2>&1 >/dev/null",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "cd ${workspaceFolder}/nRF5_SDK_12.3.0/projects/ble_peripheral/Walnut2/walnut/s130/armgcc && make clean && cd - 2>&1 >/dev/null",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
