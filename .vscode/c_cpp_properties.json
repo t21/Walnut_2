@@ -1,0 +1,176 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
+                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include",
+                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include",
+                "${workspaceRoot}",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/util",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/comp",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/twi_master",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_ancs_c",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_ias_c",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/softdevice/s130/headers",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/pwm",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/usbd/class/cdc/acm",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/usbd/class/hid/generic",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/usbd/class/msc",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/usbd/class/hid",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/log",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_gls",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/fstorage",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/i2s",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/gpiote",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/gpiote",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/boards",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/bootloader/dfu",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/common",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_advertising",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/adc",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/softdevice/s130/headers/nrf51",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_bas_c",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_hrs_c",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/queue",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_dtm",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/toolchain/cmsis/include",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_rscs_c",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/uart",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/common",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_lls",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/wdt",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/bsp",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_bas",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/experimental_section_vars",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_ans_c",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/slip",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/mem_manager",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/external/segger_rtt",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/usbd/class/cdc",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/hal",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_nus_c",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/rtc",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_ias",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/usbd/class/hid/mouse",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/ppi",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_dfu",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/twis_slave",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/scheduler",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_lbs",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_hts",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/delay",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/crc16",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/timer",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/util",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/pwm",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/projects/ble_peripheral/Walnut2/walnut/s130/config",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/csense_drv",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/csense",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/rng",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/low_power_pwm",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/hardfault",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_cscs",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/uart",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/hci",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/usbd/class/hid/kbd",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/spi_slave",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/lpcomp",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/timer",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/power",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/usbd/config",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/toolchain",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/led_softblink",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/qdec",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_cts_c",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/spi_master",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_nus",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_hids",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/pdm",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/crc32",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/usbd/class/audio",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/sensorsim",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/peer_manager",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/swi",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_tps",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_dis",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/device",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/nrf_ble_qwr",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/button",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/usbd",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/saadc",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_lbs_c",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_racp",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/toolchain/gcc",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/fds",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/twi",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/clock",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_rscs",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/usbd",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/softdevice/common/softdevice_handler",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_hrs",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/log/src"
+
+
+            ],
+            "defines": [],
+            "intelliSenseMode": "clang-x64",
+            "browse": {
+                "path": [
+                    "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
+                    "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include",
+                    "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+                    "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include",
+                    "${workspaceRoot}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "macFrameworkPath": [
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks"
+            ]
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "/usr/include",
+                "/usr/local/include",
+                "${workspaceRoot}"
+            ],
+            "defines": [],
+            "intelliSenseMode": "clang-x64",
+            "browse": {
+                "path": [
+                    "/usr/include",
+                    "/usr/local/include",
+                    "${workspaceRoot}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        },
+        {
+            "name": "Win32",
+            "includePath": [
+                "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include",
+                "${workspaceRoot}"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE"
+            ],
+            "intelliSenseMode": "msvc-x64",
+            "browse": {
+                "path": [
+                    "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include/*",
+                    "${workspaceRoot}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ],
+    "version": 3
+}
