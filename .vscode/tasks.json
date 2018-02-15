@@ -38,6 +38,24 @@
             "problemMatcher": [
                 "$gcc"
             ]
+        },
+        {
+            "label": "Flash debug",
+            "type": "shell",
+            "command": "nrfjprog --program ${workspaceFolder}/nRF5_SDK_12.3.0/components/softdevice/s130/hex/s130_nrf51_2.0.1_softdevice.hex -f nrf51 --sectorerase && nrfjprog --program ${workspaceFolder}/nRF5_SDK_12.3.0/projects/ble_peripheral/Walnut2/walnut/s130/armgcc/_build/walnut2_debug.hex -f nrf51 --sectorerase && nrfjprog --reset -f nrf51",
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Erase all",
+            "type": "shell",
+            "command": "nrfjprog --eraseall -f nrf51",
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
         }
     ]
 }
