@@ -59,6 +59,7 @@
 #include "bsp_btn_ble.h"
 #include "w_ble.h"
 #include "w_power.h"
+#include "w_sensor_hub.h"
 
 #define NRF_LOG_MODULE_NAME "APP"
 #include "nrf_log.h"
@@ -387,6 +388,7 @@ int main(void)
     buttons_leds_init(&erase_bonds);
     w_ble_init(erase_bonds);
     sensor_simulator_init();
+    w_sensor_hub_init();
 
     // Start execution.
     NRF_LOG_INFO("Application Start!\r\n");
