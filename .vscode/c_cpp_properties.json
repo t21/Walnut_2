@@ -111,9 +111,8 @@
                 "${workspaceRoot}/nRF5_SDK_12.3.0/components/drivers_nrf/usbd",
                 "${workspaceRoot}/nRF5_SDK_12.3.0/components/softdevice/common/softdevice_handler",
                 "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/ble_services/ble_hrs",
-                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/log/src"
-
-
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/libraries/log/src",
+                "${workspaceRoot}/nRF5_SDK_12.3.0/components/ble/nrf_ble_gatt"
             ],
             "defines": [],
             "intelliSenseMode": "clang-x64",
