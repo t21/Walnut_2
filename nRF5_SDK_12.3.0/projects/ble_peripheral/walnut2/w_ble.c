@@ -16,6 +16,7 @@
 #include "ble_bas.h"
 #include "ble_hrs.h"
 #include "ble_dis.h"
+#include "ble_ess.h"
 #include "ble_conn_params.h"
 #include "softdevice_handler.h"
 #include "app_timer.h"
@@ -65,6 +66,7 @@
 static uint16_t  m_conn_handle = BLE_CONN_HANDLE_INVALID; /**< Handle of the current connection. */
 static ble_bas_t m_bas;                                   /**< Structure used to identify the battery service. */
 static ble_hrs_t m_hrs;                                   /**< Structure used to identify the heart rate service. */
+static ble_ess_t m_ess;                                   /**< Structure used to identify the environmental sensing service. */
 
 static nrf_ble_gatt_t m_gatt;                             /**< Structure for gatt module*/
 
@@ -245,6 +247,7 @@ static void services_init(void)
     ble_hrs_init_t hrs_init;
     ble_bas_init_t bas_init;
     ble_dis_init_t dis_init;
+    ble_ess_init_t ess_init;
     uint8_t        body_sensor_location;
 
     // Initialize Heart Rate Service.
@@ -294,6 +297,27 @@ static void services_init(void)
     BLE_GAP_CONN_SEC_MODE_SET_NO_ACCESS(&dis_init.dis_attr_md.write_perm);
 
     err_code = ble_dis_init(&dis_init);
+    APP_ERROR_CHECK(err_code);
+
+    // Initialize Environmental Sensing Service.
+    // body_sensor_location = BLE_HRS_BODY_SENSOR_LOCATION_FINGER;
+
+    memset(&ess_init, 0, sizeof(ess_init));
+
+    ess_init.evt_handler                     = NULL;
+    ess_init.is_temperature_sensor_supported = true;
+    // hrs_init.is_sensor_contact_supported = true;
+    // hrs_init.p_body_sensor_location      = &body_sensor_location;
+
+    // Here the sec level for the Environmental Sensing Service can be changed/increased.
+    BLE_GAP_CONN_SEC_MODE_SET_OPEN(&ess_init.ess_temperature_attr_md.cccd_write_perm);
+    BLE_GAP_CONN_SEC_MODE_SET_OPEN(&ess_init.ess_temperature_attr_md.read_perm);
+    BLE_GAP_CONN_SEC_MODE_SET_NO_ACCESS(&ess_init.ess_temperature_attr_md.write_perm);
+
+    // BLE_GAP_CONN_SEC_MODE_SET_OPEN(&hrs_init.hrs_bsl_attr_md.read_perm);
+    // BLE_GAP_CONN_SEC_MODE_SET_NO_ACCESS(&hrs_init.hrs_bsl_attr_md.write_perm);
+
+    err_code = ble_ess_init(&m_ess, &ess_init);
     APP_ERROR_CHECK(err_code);
 }
 
