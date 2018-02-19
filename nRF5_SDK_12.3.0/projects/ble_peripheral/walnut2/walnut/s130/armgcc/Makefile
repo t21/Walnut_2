@@ -38,6 +38,7 @@ SRC_FILES += \
   $(SDK_ROOT)/components/libraries/bsp/bsp_nfc.c \
   $(PROJ_DIR)/main.c \
   $(PROJ_DIR)/w_ble.c \
+  $(PROJ_DIR)/w_led.c \
   $(PROJ_DIR)/w_power.c \
   $(PROJ_DIR)/w_sensor_hub.c \
   $(PROJ_DIR)/ble_ess.c \

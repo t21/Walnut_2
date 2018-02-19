@@ -58,6 +58,7 @@
 #include "nrf_delay.h"
 #include "bsp_btn_ble.h"
 #include "w_ble.h"
+#include "w_led.h"
 #include "w_power.h"
 #include "w_sensor_hub.h"
 
@@ -348,7 +349,7 @@ static void buttons_leds_init(bool * p_erase_bonds)
 {
     bsp_event_t startup_event;
 
-    uint32_t err_code = bsp_init(BSP_INIT_LED | BSP_INIT_BUTTONS,
+    uint32_t err_code = bsp_init(BSP_INIT_BUTTONS,
                                  APP_TIMER_TICKS(100, APP_TIMER_PRESCALER),
                                  bsp_event_handler);
 
